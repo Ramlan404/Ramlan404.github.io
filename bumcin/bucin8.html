@@ -1,0 +1,166 @@
+<html>
+<meta charset='UTF-8'/>
+<meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+<head>
+<!-- Judul untuk Browser -->
+  <title>I LOVE YOU CANTIK</title>
+</head>
+
+<body>
+<style>
+body{background-color:#1e1e1e;}
+a{text-decoration:none;}
+body{font-family: 'Quicksand', sans-serif;padding: 25px}
+#geser{opacity:.8;color:#ffffff;margin-top:12px;}
+
+@keyframes leaves {0% {transform: scale(1.0);} 100% {transform: scale(.8);}}
+#lope, #lopdeg{animation: leaves 1s ease-in-out infinite alternate;-webkit-animation: leaves 1s ease-in-out infinite alternate;}
+
+.scrollImage p{font-size:16px;font-weight:700;}
+.scrollImage{display:flex;flex-wrap:nowrap;align-items:flex-start;justify-content:flex-start;position:relative;width:calc(100%);left:-20px;padding:0 20px; overflow-y:hidden;overflow-x:scroll;scroll-behavior:smooth;scroll-snap-type:x mandatory; -ms-overflow-style:none;-webkit-overflow-scrolling:touch} 
+.scrollImage > *{display:flex;flex-wrap:nowrap;text-align:center;align-items:center;justify-content:center;border-radius:10px;flex-shrink:0; width:90%; height:30vh;background:#FFFFFF;margin:0 15px 0 0; scroll-snap-align:center} .scrollImage > *:last-child{margin-right:0} .scrollImage:after{content:'';display:block;flex-shrink:0; align-self:stretch;padding-left:20px}
+
+/* Teks Ganjil */.scrollImage p:nth-child(odd){color:#0B1600;}
+/* Teks Genap */.scrollImage p:nth-child(even){color:#000D8A;}
+#wrn1{color:#C600C3} #wrn2{color:#3D7A00}
+
+blockquote{position:relative;opacity:.8;margin-left:0;margin-right:0; padding:30px 25px;}
+blockquote{color:#fefefe;font-size:15px;padding:30px 25px 30px 45px; border:1px solid #97999A;border-left:0;border-right:0} blockquote:before{content:'\201D';display:block; position:absolute;top:18px;left:0; font-weight:700;font-size:60px; line-height:normal}
+
+.lovein{background-color:#ffffff;width:48px;height:48px;font-size:20px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:all .1s ease;}
+.lovein:hover, .foto img:hover{transform: scale(1.2);}
+.lovein svg{width:30px;height:30px;fill:#fefefe}
+
+.foto, .content2{display:block;text-align:center;width:100%;height:150px;margin-top:50px;}
+.foto > *, .content2 > *{display:flex;align-items:center;justify-content:center;margin-top:15px;font-size:18px;color:white}
+.foto img{border-radius:50%;transition:all .1s ease;}
+
+.icon{flex-shrink:0; display:inline-block;margin-right:12px; width:18px;height:18px; background-size:cover;background-repeat:no-repeat;background-position:center}
+.icon.whatsapp{background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='%23fefefe'><g><path d='M16,2A13,13,0,0,0,8,25.23V29a1,1,0,0,0,.51.87A1,1,0,0,0,9,30a1,1,0,0,0,.51-.14l3.65-2.19A12.64,12.64,0,0,0,16,28,13,13,0,0,0,16,2Zm0,24a11.13,11.13,0,0,1-2.76-.36,1,1,0,0,0-.76.11L10,27.23v-2.5a1,1,0,0,0-.42-.81A11,11,0,1,1,16,26Z'/><path d='M19.86,15.18a1.9,1.9,0,0,0-2.64,0l-.09.09-1.4-1.4.09-.09a1.86,1.86,0,0,0,0-2.64L14.23,9.55a1.9,1.9,0,0,0-2.64,0l-.8.79a3.56,3.56,0,0,0-.5,3.76,10.64,10.64,0,0,0,2.62,4A8.7,8.7,0,0,0,18.56,21a2.92,2.92,0,0,0,2.1-.79l.79-.8a1.86,1.86,0,0,0,0-2.64Zm-.62,3.61c-.57.58-2.78,0-4.92-2.11a8.88,8.88,0,0,1-2.13-3.21c-.26-.79-.25-1.44,0-1.71l.7-.7,1.4,1.4-.7.7a1,1,0,0,0,0,1.41l2.82,2.82a1,1,0,0,0,1.41,0l.7-.7,1.4,1.4Z'/></g></svg>")}
+.button{display:inline-flex;align-items:center; margin:0;margin-left:-500%;transition:all .5s ease;padding:10px 15px;outline:0;border:0; border-radius:2px;line-height:20px; color:#fefefe; background-color:var(--link-bg); font-size:13px;white-space:nowrap;overflow:hidden;max-width:100%}
+.button.whatsapp{background-color:#199046}
+</style>
+
+<div class="foto">
+<div class="image" onClick="iloveu();"><img src="https://i.ibb.co/dBbk3sw/arena-of-valor-sinestrea-by-arataneoxy-deobtn6.jpg" width="100px" height="100px"/></div>
+<span id="sp1">Kamu <div id="lope" class="leaves" style="display:inline-block;align-items:center;justify-content:center;">&#9829;</div></span>
+<span id="sp2" style="display:none;">I Love You <div id="lope" class="leaves" style="display:inline-block;align-items:center;justify-content:center;">&#9829;</div></span>
+</div>
+
+<div id='Content' style="display:none">
+<blockquote><p id="text"></p><p id="text2" style="font-size:10px;text-align:right;opacity:.7;"></p></blockquote>
+<a id="whs" class='button whatsapp' href='https://api.whatsapp.com/send?phone=6285559240360&text=Hai,%0AMmmm%0A%0AAku%20udah%20bacain%20semuanya><'><i class='icon whatsapp'></i>Kirim pesan</a>
+</div>
+
+<div id="tombo" class="content2">
+<div id="lopdeg" class="ct1"><label class='lovein' onClick="mulai();nonTo()">&#10084;&#65039;</label></div>
+<p style="opacity:.7;font-size:10px;color:white">Pencet Love-nya</p>
+</div>
+
+<script>
+  function nonTo() {document.getElementById('tombo').style.display = "none";}
+  function showTo() {document.getElementById('tombo').style.display = "block";}
+  function nonDiv() {document.getElementById('Content').style.display = "none";}
+  function showDiv() {document.getElementById('Content').style.display = "block";}
+  function whtsp() {document.getElementById('whs').style.margin = "12px 12px 12px 0";}
+  function iloveu() {if(u==text2.length){document.getElementById('sp1').style.display = "none";document.getElementById('sp2').style.display = "block";document.getElementById('text2').style.display = "none";}}
+
+  var i=0,text;
+  text = "AwKarin makan batu, I can't stop thinking about you."
+  var u=0,text2;
+  text2 = "Coba klik foto kamu dong!"
+
+  function ketik() {
+    if(i<text.length){
+      document.getElementById("text").innerHTML += text.charAt(i);
+      i++;
+      
+      setTimeout(ketik,100);
+    }
+    if(i==text.length){
+    ketikk();}
+  }
+  function ketikk() {
+    if(u<text2.length){
+      document.getElementById("text2").innerHTML += text2.charAt(u);
+      u++;
+      setTimeout(ketikk,200);
+    }
+    if(u==text2.length){
+    whtsp();}
+  }
+  
+</script>
+
+<!-- Ini JS agar Tombolnya berjalan sesuai perintah -->
+<script type="text/javascript">
+            const author = 'Ramlan';
+            const swals = Swal.mixin({
+                cancelButtonColor: '#909090',
+                confirmButtonColor: '#00B487',
+            });
+            async function mulai(){
+                var { value: nama } = await swals.fire({
+                    title: 'Masukin nama kamu',
+                    input: 'text',
+                    showCancelButton: false,
+                });
+                if(nama){
+                    var { isConfirmed: sayang } = await swals.fire({
+                        title: `${nama} sayang gak sama ${author} :(`,
+                        confirmButtonText: 'Sayang',
+                        cancelButtonText: 'G',
+                        showCancelButton: true,
+                    });
+                    if(sayang){
+                        var { value: persen } = await swals.fire({
+                            title: 'Seberapa sayang?',
+                            icon: 'question',
+                            input: 'range',
+                            inputLabel: 'Antara 90-100% ya',
+                            inputAttributes: {
+                                min: 90,
+                                max: 100,
+                            },
+                            allowOutsideClick: false,
+                            inputValue: 90
+                        });
+                        if(persen){
+                            await swals.fire(`Maacii udah sayang sama ${author} ${persen}%`);
+                            var { isConfirmed: kangen } = await swals.fire({
+                                title: `Terus ${nama} kangen ga sama ${author}?`,
+                                confirmButtonText: 'Kangen',
+                                cancelButtonText: 'Gak!',
+                                showCancelButton: true,
+                            });
+                            if(kangen){
+                                await swals.fire(`Awwhh ${author} juga kangen ${nama} &#10084;&#65039;`);
+                                await swals.fire('Thx uu!', 'Udah meluangkan waktunya!');
+                                await swals.fire(`Sekarang lihat ini yaa`);
+                                
+                                ketik();showDiv()
+                            } else {
+                                //gak kangen
+                                await swals.fire('Aarrgghhh');
+                                showTo();
+                            }
+                        }
+                    } else {
+                        //gak sayang
+                        await swals.fire('Yahh. Sedih :(');
+                        await swals.fire('Yaudah deh');
+                        await swals.fire('Semoga harimu indah &#10084;&#65039;');
+                        showTo();
+                    }
+                } else {
+                    await swals.fire('Isi namanya ayanggg');
+                    await swals.fire('Gak boleh kosong');
+                    mulai();
+                }
+            }
+</script>
+</body>
+</html>
